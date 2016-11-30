@@ -13,7 +13,7 @@ local function pre_process(msg)
 			return
 		end
 	end
-	if tonumber(timetoexpire) == 0 then
+	if tonumber(timetoexpire) == 0 theابییبرانالبn
 		if redis:hget('expires0',msg.to.id) then return msg end
 		send_large_msg(get_receiver(msg), '0 روز تا پایان تاریخ انقضای گروه باقی مانده است\nنسبت به تمدید اقدام کنید.')
 		redis:hset('expires0',msg.to.id,'5')
